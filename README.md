@@ -49,47 +49,6 @@
 1. 建立 MySQL 資料庫：
 
    
-sql
-   CREATE DATABASE quiz14 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-   
-
-
-2. 匯入建表與假資料：
-
-   - 將 schema.sql 和 data.sql 放入 src/main/resources/
-   - 使用 MySQL Workbench 或 CLI 匯入也可以
-
-3. 修改 `src/main/resources/application.yml`：
-
-   
-yaml
-   spring:
-     datasource:
-       url: jdbc:mysql://localhost:3306/quiz14
-       username: root
-       password: yourpassword
-     jpa:
-       hibernate:
-         ddl-auto: none
-       show-sql: true
-   
-
-
-4. 啟動 Spring Boot 專案：
-
-   
-bash
-   ./mvnw spring-boot:run
-   
-
-
----
-
-## 快速開始（後端）
-
-1. 建立 MySQL 資料庫：
-
-   
    ```sql
    CREATE DATABASE quiz14 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    ```
