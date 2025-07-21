@@ -129,7 +129,7 @@
 - login頁面直接登入即可進入管理者身分操作後台
 ---
 
-## 畫面截圖
+## 畫面示意
 
 ### ◆ 管理者-問卷列表
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/d7098d8d-cc79-4cde-8b89-4eea372b3b28" />
