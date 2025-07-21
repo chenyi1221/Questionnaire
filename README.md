@@ -144,7 +144,7 @@
 <img width="360" height="300" alt="localhost_4200_result_feedbackList_id=1" src="https://github.com/user-attachments/assets/9003810a-8cfb-49f1-8158-717dc9147e9e" />
 
 ### ◆ 管理者-查看使用者填答紀錄
-<img width="1545" height="1800" alt="1" src="https://github.com/user-attachments/assets/caccddd5-1c97-4388-838b-177bcc47c041" />
+<img width="300" height="450" alt="1" src="https://github.com/user-attachments/assets/caccddd5-1c97-4388-838b-177bcc47c041" />
 
 ### ◆ 用戶/管理者-統計圖表頁面
 <img width="300" height="450" alt="localhost_4200_result_count_id=1" src="https://github.com/user-attachments/assets/62c0d118-fa7a-429c-9e49-7b0978526fb6" />
