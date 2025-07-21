@@ -1,0 +1,52 @@
+<div class="backgroundCss">
+  @for(quest of quest;track $index){
+  <div class="titleCss"><h1>{{ quest.title }}</h1></div>
+  <div class="explanationCss">{{ quest.explanation }}</div>}
+
+  <br><br>
+  <div class="userDataCss">
+  <span style="color: red;">* </span><label>姓名 : </label>
+  <input required placeholder="請輸入名稱" class="inputCss" disabled><br><br>
+  <span style="color: red;">* </span><label>手機 : </label>
+  <input required placeholder="請輸入手機" class="inputCss" disabled><br><br>
+  <span style="color: red;">* </span><label>信箱 : </label>
+  <input required placeholder="請輸入E-mail" class="inputCss" disabled><br><br>
+  <span style="color: red;">* </span><label>年齡 : </label>
+  <input required placeholder="請輸入年齡" class="inputCss" disabled><br><br>
+  </div>
+
+  <div class="questionCss">
+  <ol>
+    @for(question of questionArray;track $index){
+    <li>{{ question.qName }} ({{ question.typeNameChinese }})
+    @if(question.must){
+      <span style="color: red;">*</span>
+    }</li>
+
+    @if (question.type == 1){
+    @for (option of question.optionArray; track $index) {
+    <input type="radio" style="transform: scale(1.15)" name="{{question.qId}}" value="{{option.code}}" disabled>
+    {{ option.optionName }}<br>
+    }
+    }
+
+    @if (question.type == 2) {
+    @for (option of question.optionArray; track $index) {
+    <input type="checkbox"  style="transform: scale(1.15);" disabled>
+    {{ option.optionName }}<br>
+    }
+    }
+
+    @if (question.type == 3) {
+   <textarea readonly></textarea>
+      }
+    }
+  </ol>
+  </div>
+
+  <div class="btnDivCss">
+  <button class="btnCss1" (click)="saveToManagerList()">儲存</button>
+  <button class="btnCss2" (click)="postToList()">儲存並發布</button>
+  </div>
+
+  </div>

@@ -1,0 +1,85 @@
+.container {
+  min-height: 100vh;
+  background-color: rgb(146, 190, 202);
+  padding: 20px;
+  }
+
+  .divCss {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: wheat;
+  }
+
+  .titleCss {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color:  rgb(248, 197, 155);
+  }
+
+table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  font-family: sans-serif;
+  font-size: 15px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+thead {
+  background-color: rgb(248, 197, 155);
+}
+
+th,td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+  text-align: center;
+  // 讓裡面文字過長自動換行
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody>tr:nth-of-type(even) {
+  background-color: rgb(223, 211, 197);
+}
+
+tbody>tr:nth-of-type(odd) {
+  background-color: white;
+}
+
+.btnDivCss {
+  height: 20px;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 20px;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+.btnCss1 {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(248, 197, 155);
+  cursor: pointer;
+}
+
+.linkCss {
+  color: rgb(23, 62, 254);
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,116 @@
+.logoutBtn {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-left: 91%;
+  background-color:  wheat;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: rgb(146, 190, 202);
+  padding: 20px;
+  }
+
+.nameInput {
+  width: 15%;
+  height: 18px;
+  letter-spacing: 3px;
+}
+
+.divCss2 {
+  border: 3px solid black;
+  border-radius: 20px;
+  width:78%;
+  padding: 10px;
+  margin-left: 10%;
+  background-color: rgb(248, 197, 155);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+}
+
+.searchBtn {
+margin-left: 20px;
+padding: 5px;
+border-radius: 12px;
+background-color: wheat;
+font-weight: bold;
+cursor: pointer;
+}
+
+.clearSearch{
+margin-left: 20px;
+padding: 5px;
+border-radius: 12px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.rowCss {
+  background-color: wheat;
+}
+
+table {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+.mat-mdc-row:nth-child(even) {
+background-color: rgb(223, 211, 197);
+}
+
+.mat-mdc-cell {
+  border-bottom-width: var(--mat-table-row-item-outline-width, 3px);
+}
+
+.mat-mdc-header-cell {
+  border-bottom-width: var(--mat-table-row-item-outline-width, 3px);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 16px;
+}
+
+.mdc-data-table__cell {
+  text-align: center;
+}
+
+.mat-mdc-paginator {
+ border-top: 4px double black;
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+}
+
+.mat-mdc-table thead {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.iconCss {
+  cursor: pointer;
+}
+
+.iconCss:active {
+background-color: wheat
+}
+
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+.linkCss {
+  color: rgb(23, 62, 254);;
+  text-decoration: underline;
+  cursor: pointer;
+}

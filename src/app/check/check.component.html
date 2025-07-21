@@ -1,0 +1,42 @@
+<div class="backgroundCss">
+  <div class="titleCss">
+    <h1>{{ answerData.title }}</h1>
+  </div>
+  <div class="explanationCss">{{ answerData.explanation }}</div>
+
+  <br><br>
+  <div class="userDataCss">
+    <span style="color: red;">* </span><label>姓名 : </label><span>{{ answerData.userName }}</span>
+    <br><br>
+    <span style="color: red;">* </span><label>手機 : </label><span>{{ answerData.userPhone }}</span>
+    <br><br>
+    <span style="color: red;">* </span><label>信箱 : </label><span>{{ answerData.userEmail }}</span>
+    <br><br>
+    <span style="color: red;">* </span><label>年齡 : </label><span>{{ answerData.userAge }}</span>
+    <br><br>
+  </div>
+
+  <div class="questionCss">
+    <ol>
+      @for (userAnswer of answerData.answers; track $index) {
+      <li>{{ userAnswer.qName }} ( {{ userAnswer.typeNameChinese }} )
+        @if ( userAnswer.must == true ) {
+        <span style="color: red;">*</span>
+        }
+      </li>
+
+      <ul>
+        @for (option of userAnswer.optionArray; track $index) {
+        <li>{{ option }}</li>
+        }
+      </ul>
+      }
+    </ol>
+  </div>
+
+  <div class="btnDivCss">
+    <button class="btnCss1" (click)="goBackToAnswer()">返回答題頁</button>
+    <button class="btnCss2" (click)="goBackToList()">確認提交</button>
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="titleCss"><h1>問卷填寫紀錄</h1></div>
+<div class="divCss">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col" style="width: 50px; letter-spacing: 5px; font-size: 17px;">編號</th>
+        <th scope="col"style="width: 50px; letter-spacing: 5px; font-size: 17px;">姓名</th>
+        <th scope="col" style="width: 90px; letter-spacing: 5px; font-size: 17px">填寫時間</th>
+        <th scope="col" style="width: 50px; letter-spacing: 5px; font-size: 17px">問卷回饋</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (feedback of feedbackData; let i = $index; track i) {
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td>{{ feedback.userName }}</td>
+        <td>{{ feedback.fillinDate }}</td>
+        <td><a (click)="showFeedback(feedback.index)" class="linkCss"> {{ feedback.showFeedback }} </a></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<div class="btnDivCss">
+  <button class="btnCss1" (click)="goBackToManagerList()">返回列表頁</button>
+</div>
+
+  </div>

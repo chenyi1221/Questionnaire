@@ -1,0 +1,88 @@
+<div class="container">
+
+  <button class="logoutBtn" (click)="logOut()">管理員登出</button>
+  <div class="divCss2">
+    <label>問卷名稱:</label><input class="nameInput" type="text" [(ngModel)]="inputData" placeholder="請輸入關鍵字">
+    <label> 統計時間:</label><input style="width: 15%;" type="date" [(ngModel)]="dateFrom" min="2025-03-01"> ~ <input
+      style="width: 15%;" type="date" [(ngModel)]="dateEnd" [min]="dateFrom">
+    <button class="searchBtn" (click)="searchBtn()">搜尋</button>
+    <button class="clearSearch" (click)="clearSearch()">清除條件</button>
+  </div>
+  <br><br>
+
+
+
+  <div class="mat-elevation-z8" style="width:80%;margin-left: 10%;">
+    <mat-icon fontIcon="delete" class="iconCss" (click)="delete()"></mat-icon>
+    <mat-icon fontIcon="add" class="iconCss" (click)="goToAddQuestionnaire()"></mat-icon>
+    <table mat-table [dataSource]="dataSource">
+
+      <!-- checkbox Column -->
+      <ng-container matColumnDef="checkbox">
+        <th mat-header-cell *matHeaderCellDef>
+          <input type="checkbox" [(ngModel)]="allCheckboxBoolean" (change)="changeAllCheckbox()"
+            style="transform: scale(1.25);">
+        </th>
+        <td mat-cell *matCellDef="let element"><input type="checkbox" [(ngModel)]="element.checkboxBoolean"
+            (change)="changeCheckbox()" style="transform: scale(1.25);"
+            [disabled]="element.status === '進行中' || element.status === '已結束'"></td>
+      </ng-container>
+
+
+      <!-- Number Column -->
+      <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef> 編號 </th>
+        <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> 名稱 </th>
+        <td mat-cell *matCellDef="let element">
+          @if (element.status == '進行中' || element.status == '已結束') { {{element.name}} }
+          @else if (element.status == '未開始' || element.status == '未發布'){
+          <a (click)="goToEditQuestionnaire(element)" class="linkCss"> {{element.name}} </a> }
+        </td>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> 狀態 </th>
+        <td mat-cell *matCellDef="let element">{{element.status}} </td>
+      </ng-container>
+
+      <!-- StartTime Column -->
+      <ng-container matColumnDef="startDate">
+        <th mat-header-cell *matHeaderCellDef> 開始時間 </th>
+        <td mat-cell *matCellDef="let element"> {{element.startDate}}</td>
+      </ng-container>
+
+      <!-- EndTime Column -->
+      <ng-container matColumnDef="endDate">
+        <th mat-header-cell *matHeaderCellDef> 結束時間 </th>
+        <td mat-cell *matCellDef="let element"> {{element.endDate}} </td>
+      </ng-container>
+
+      <!-- Result Column -->
+      <ng-container matColumnDef="result">
+        <th mat-header-cell *matHeaderCellDef> 結果 </th>
+        <td mat-cell *matCellDef="let element">
+          @if (element.status == '已結束') {
+          <a (click)="goToFeedbackList(element)" class="linkCss">{{element.result}}</a> }
+          @else if (element.status == '進行中' || element.status == '未開始' || element.status == '未發布') {
+          {{element.result}}
+          }
+
+        </td>
+      </ng-container>
+
+      <tr class="rowCss" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator class="rowCss" [pageSizeOptions]="[10, 20]" showFirstLastButtons
+      aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+
+</div>

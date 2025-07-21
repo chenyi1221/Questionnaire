@@ -1,0 +1,67 @@
+<div class="divCss">
+  <div class="left">
+    <label>題目 : </label><input type="text" class="name" [(ngModel)]="qName">
+    <mat-icon fontIcon="refresh" (click)="refresh()" class="refreshIconCss" title="重設編輯"></mat-icon>
+    <br>
+    <label>類型 : </label>
+    <button (click)="setType(1)" [disabled]="selectedType !== 0 && selectedType !== 1" class="typeBtn">單選</button>
+    <button (click)="setType(2)" [disabled]="selectedType !== 0 && selectedType !== 2" class="typeBtn">多選</button>
+    <button (click)="setType(3)" [disabled]="selectedType !== 0 && selectedType !== 3" class="typeBtn">簡答題</button>
+    <br>
+    <label>必填 : </label><input type="checkbox" [(ngModel)]="must" style="transform: scale(1.25);">
+    <br>
+
+
+    @if(selectedType !== 3){
+
+    <label>選項 : </label>
+    <button (click)="addOption()" class="typeBtn">新增選項</button>
+    <mat-icon fontIcon="delete" (click)="delete()" class="deleteIcon1" title="刪除選項"></mat-icon>
+      <input type="checkbox" [(ngModel)]="allCheckboxBoolean" (change)="changeAllCheckbox()"
+        style="transform: scale(1.25);">
+      <br>
+      @for(input of optionArray;track input; let i = $index){
+      <input [(ngModel)]="optionArray[i].optionName" type="text"><input type="checkbox" [(ngModel)]="input.checkboxBoolean"
+        (change)="changeCheckbox()" style="transform: scale(1.25);margin-left: 10px;"><br>}
+    }
+    <button (click)="add()" class="typeBtn">加入列表</button>
+  </div>
+
+  <div class="right">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" style="width: 40px;">
+            <mat-icon fontIcon="delete" (click)="tabDelete()" class="deleteIcon2" title="刪除題目"></mat-icon>
+            </th>
+          <th scope="col" style="letter-spacing: 4px; width: 40px;">編號</th>
+          <th scope="col" style="letter-spacing: 4px;">題目</th>
+          <th scope="col" style="letter-spacing: 4px; width: 60px;">類型</th>
+          <th scope="col" style="letter-spacing: 4px; width: 40px;">必填</th>
+          <th scope="col" style="letter-spacing: 4px; width: 70px;">編輯</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (quest of questionArray; track $index) {
+        <tr>
+          <td>
+            <input type="checkbox" [(ngModel)]="quest.tabBoxboolean">
+          </td>
+          <td>{{ quest.qId }}</td>
+          <td>{{quest.qName}}</td>
+          <td>{{quest.typeNameChinese}}</td>
+          <td>
+            <input type="checkbox" [disabled]="true" [(ngModel)]="quest.must" class="custom-checkbox">
+          </td>
+          <td><button (click)="editQuestion(quest)" class="editBtn">編輯</button></td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="btnDiv">
+  <button class="btnCss1" (click)="previous()">上一步</button>
+  <button class="btnCss2" (click)="goToPreview()">送出</button>
+</div>

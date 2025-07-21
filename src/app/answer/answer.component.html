@@ -1,0 +1,51 @@
+<div class="backgroundCss">
+<div class="titleCss"><h1>{{ questionnaire.title }}</h1></div>
+<div class="explanationCss">{{ questionnaire.explanation }}</div>
+
+<br><br>
+<div class="userDataCss">
+<span style="color: red;">* </span><label>姓名 : </label>
+<input required placeholder="請輸入名稱" [(ngModel)]="userName" class="inputCss"><br><br>
+<span style="color: red;">* </span><label>手機 : </label>
+<input required placeholder="請輸入手機" [(ngModel)]="userPhone" class="inputCss"><br><br>
+<span style="color: red;">* </span><label>信箱 : </label>
+<input required placeholder="請輸入E-mail" [(ngModel)]="userEmail" class="inputCss"><br><br>
+<span style="color: red;">* </span><label>年齡 : </label>
+<input required placeholder="請輸入年齡" [(ngModel)]="userAge" class="inputCss"><br><br>
+</div>
+
+<div class="questionCss">
+<ol>
+  @for(question of questionnaire.questionArray;track $index){
+  <li>{{ question.qName }} ({{ question.typeNameChinese }})
+  @if(question.must){
+    <span style="color: red;">*</span>
+  }</li>
+
+  @if (question.type == 1){
+  @for (option of question.optionArray; track $index) {
+  <input type="radio" style="transform: scale(1.15)" name="{{question.quesId}}" value="{{option.optionName}}" [(ngModel)]="question.selectedAnswer">
+  {{ option.optionName }}<br>
+  }
+  }
+
+  @if (question.type == 2) {
+  @for (option of question.optionArray; track $index) {
+  <input type="checkbox"  style="transform: scale(1.15);"  [(ngModel)]="option.boxBoolean">
+  {{ option.optionName }}<br>
+  }
+  }
+
+  @if (question.type == 3) {
+ <textarea  [(ngModel)]="question.selectedAnswer"></textarea>
+    }
+  }
+</ol>
+</div>
+
+<div class="btnDivCss">
+<button class="btnCss1" (click)="gobackToList()">返回列表頁</button>
+<button class="btnCss2" (click)="goToCheck()">預覽答題</button>
+</div>
+
+</div>

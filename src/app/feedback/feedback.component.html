@@ -1,0 +1,54 @@
+<div class="backgroundCss">
+  <div class="titleCss">
+    <h1>{{ questionnaire.title }}</h1>
+  </div>
+  <div class="explanationCss">{{ questionnaire.explanation }}</div>
+
+  <br><br>
+  <div class="userDataCss">
+    <span style="color: red;">* </span><label>姓名 : </label><span>{{ questionnaire.userName }}</span>
+    <br><br>
+    <span style="color: red;">* </span><label>手機 : </label><span>{{ questionnaire.userPhone }}</span>
+    <br><br>
+    <span style="color: red;">* </span><label>信箱 : </label><span>{{ questionnaire.userEmail }}</span>
+    <br><br>
+    <span style="color: red;">* </span><label>年齡 : </label><span>{{ questionnaire.userAge }}</span>
+    <br><br>
+  </div>
+
+  <div class="questionCss">
+    <ol>
+      @for (userAnswer of questionnaire.questionArray; track $index) {
+      <li>{{ userAnswer.qName }} ( {{ userAnswer.typeName }} )
+        @if ( userAnswer.must == true ) {
+        <span style="color: red;">*</span>
+        }
+      </li>
+
+      <ul>
+        @if (userAnswer.type == 1) {
+        @for (option of userAnswer.optionArray; track $index) {
+        <li>{{ option.optionName }}</li>
+        }
+        }
+
+        @if (userAnswer.type == 2) {
+        @for (option of userAnswer.optionArray; track $index) {
+        <li>{{ option.optionName }}</li>
+        }
+        }
+
+        @if (userAnswer.type == 3 && userAnswer.selectedAnswer) {
+        <span>{{ userAnswer.selectedAnswer }}</span>
+        }
+      </ul>
+
+      }
+    </ol>
+  </div>
+
+  <div class="btnDivCss">
+    <button class="btnCss1" (click)="goBackToFeedbackList()">返回填寫紀錄</button>
+  </div>
+
+</div>
