@@ -134,10 +134,10 @@
 ### ◆ 管理者-問卷列表
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/d7098d8d-cc79-4cde-8b89-4eea372b3b28" />
 
-### ◆ 管理者-新增問卷
+### ◆ 管理者-新增、編輯問卷
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/f37493a6-e9a1-47cf-b9a7-eebbe7f302c9" />
 
-### ◆ 管理者-新增題目
+### ◆ 管理者-新增、編輯題目
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/ccb7a90c-6a47-49d9-a478-4653f33bbfa6" />
 
 ### ◆ 管理者-問卷填寫記錄列表
