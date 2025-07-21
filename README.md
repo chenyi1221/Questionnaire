@@ -126,3 +126,12 @@
 - 專案起始首頁為 http://localhost:4200/list
 - 問卷列表需搭配 Angular Material 正確顯示
 - 問卷統計圖表需搭配 Chart.js 正確顯示
+---
+
+## 畫面截圖
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/d7098d8d-cc79-4cde-8b89-4eea372b3b28" />
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/f37493a6-e9a1-47cf-b9a7-eebbe7f302c9" />
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/ccb7a90c-6a47-49d9-a478-4653f33bbfa6" />
+<img width="300" height="450" alt="localhost_4200_answer_id=2" src="https://github.com/user-attachments/assets/45bdaa8d-e343-40b1-9b49-18c95e777d2d" />
+
+
