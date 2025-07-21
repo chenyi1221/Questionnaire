@@ -1,59 +1,43 @@
-# Questionnaire
+# Questionnaire 系統
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+本專案為一套動態問卷系統，包含 **Angular 17 前端** 與 **Spring Boot 後端（MySQL 資料庫）**，支援問卷建立、作答、統計分析與前後台分權操作。
 
-## Development server
+---
 
-To start a local development server, run:
+## 專案功能
 
-```bash
-ng serve
-```
+### 🔹 前台（使用者端）
+- 模糊搜尋公開問卷
+- 動態作答支援多題型（單選、多選、填空）
+- 回答送出後可即時瀏覽統計圖表（Chart.js）
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 🔸 後台（管理者端）
+- 登入後管理問卷與題目（新增、修改、刪除）
+- 模糊搜尋所有問卷
+- 檢視每份問卷的答題回饋與統計
+- 管理作答紀錄與內容
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 使用技術
 
-```bash
-ng generate component component-name
-```
+### 前端 Frontend
+- Angular 17
+- Angular Material
+- Chart.js
+- HTML / SCSS / TypeScript
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+### 後端 Backend
+- Spring Boot (Java)
+- MySQL Database
+- JPA / Hibernate
+- RESTful API
 
-## Building
+---
 
-To build the project run:
+## 專案結構
 
-```bash
-ng build
-```
+### 前端 Frontend（[Repo](https://github.com/chenyi1221/Questionnaire)）
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 後端 Backend（[Repo](https://github.com/chenyi1221/quiz14)）
