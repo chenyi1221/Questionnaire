@@ -1,6 +1,6 @@
-# Questionnaire 系統
+# Questionnaire 動態問卷
 
-本專案為一套動態問卷系統，包含 **Angular 17 前端** 與 **Spring Boot 後端（MySQL 資料庫）**，支援問卷建立、作答、統計分析與前後台分權操作。
+本專案為一套動態問卷系統，包含 **Angular 17 前端** 與 **Spring Boot 後端（MySQL 資料庫）**，支援問卷建立、作答、統計分析與前台使用者、後台管理者分權操作。
 
 ---
 
