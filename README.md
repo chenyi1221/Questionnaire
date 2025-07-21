@@ -1,12 +1,12 @@
 # Questionnaire 動態問卷
 
-本專案為一套動態問卷系統，包含 **Angular 17 前端** 與 **Spring Boot 後端（MySQL 資料庫）**，支援問卷建立、作答、統計分析與前台使用者、後台管理者分權操作。
+本專案為一套動態問卷系統，包含 **Angular 17 前端** 與 **Spring Boot 後端（MySQL 資料庫）**，支援問卷建立、作答、統計分析與前台用戶、後台管理者分權操作。
 
 ---
 
 ## 專案功能
 
-### ◆ 前台（使用者）
+### ◆ 前台（用戶）
 - 模糊搜尋公開問卷
 - 動態作答支援多題型（單選、多選、填空）
 - 回答送出後可即時瀏覽統計圖表（Chart.js）
@@ -126,29 +126,30 @@
 - 專案起始首頁為 http://localhost:4200/list
 - 問卷列表需搭配 Angular Material 正確顯示
 - 問卷統計圖表需搭配 Chart.js 正確顯示
+- login頁面直接登入即可
 ---
 
 ## 畫面截圖
 
-### 管理者-問卷列表
+### ◆ 管理者-問卷列表
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/d7098d8d-cc79-4cde-8b89-4eea372b3b28" />
----
-### 管理者-新增問卷
+
+### ◆ 管理者-新增問卷
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/f37493a6-e9a1-47cf-b9a7-eebbe7f302c9" />
----
-### 管理者-新增題目
+
+### ◆ 管理者-新增題目
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/ccb7a90c-6a47-49d9-a478-4653f33bbfa6" />
----
-### 管理者-問卷填寫記錄列表
+
+### ◆ 管理者-問卷填寫記錄列表
 <img width="360" height="300" alt="localhost_4200_result_feedbackList_id=1" src="https://github.com/user-attachments/assets/9003810a-8cfb-49f1-8158-717dc9147e9e" />
----
-### 管理者-查看使用者填答紀錄
+
+### ◆ 管理者-查看使用者填答紀錄
 <img width="1545" height="1800" alt="1" src="https://github.com/user-attachments/assets/caccddd5-1c97-4388-838b-177bcc47c041" />
----
-### 使用者/管理者-統計圖表頁面
+
+### ◆ 用戶/管理者-統計圖表頁面
 <img width="300" height="450" alt="localhost_4200_result_count_id=1" src="https://github.com/user-attachments/assets/62c0d118-fa7a-429c-9e49-7b0978526fb6" />
----
-### 使用者-作答頁面
+
+### ◆ 用戶-作答頁面
 <img width="300" height="450" alt="localhost_4200_answer_id=2" src="https://github.com/user-attachments/assets/45bdaa8d-e343-40b1-9b49-18c95e777d2d" />
 
 
