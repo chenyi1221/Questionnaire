@@ -123,5 +123,6 @@
 
 ## 注意事項
 
+- 專案起始首頁為 http://localhost:4200/list
 - 問卷列表需搭配 Angular Material 正確顯示
 - 問卷統計圖表需搭配 Chart.js 正確顯示
